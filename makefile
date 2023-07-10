@@ -1,7 +1,7 @@
 all: clean test
 
 appTests: test/tests.cpp Posicion.cpp Personaje.cpp
-	g++ -fsanitize=address --std=c++17 test/tests.cpp Posicion.cpp Personaje.cpp -o build/appTests
+	g++ -fsanitize=address --std=c++17 test/tests.cpp test/catch_amalgamated.cpp Posicion.cpp Personaje.cpp -o build/appTests
 
 test: appTests
 	# executes all tests
@@ -22,4 +22,4 @@ debugvs:
 	g++ *.cpp -g -o build/dexercise
 
 debugtest: 
-	g++ -fsanitize=address --std=c++17 test/tests.cpp Posicion.cpp Personaje.cpp -g -o build/dexercise
+	g++ -fsanitize=address --std=c++17 test/tests.cpp test/catch_amalgamated.cpp Posicion.cpp Personaje.cpp -g -o build/dexercise
