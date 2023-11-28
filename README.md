@@ -11,7 +11,7 @@ Ve siguiendo paso a paso las instrucciones de tu examen. **Archivo pdf que está
 
 ```mermaid
 classDiagram
-    Personaje o-- Posicion
+    Personaje *-- Posicion
       class Posicion{
         - posX : int
         - posY : int
